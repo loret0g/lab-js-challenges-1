@@ -94,9 +94,23 @@ const duplicateWords = [
   "bring"
 ];
 
-function uniquifyArray() {}
 
+function uniquifyArray(wordsArray) {
+  let newArray = []
+if (wordsArray.length === 0){
+  return null
+}
 
+  for(let i = 0; i < wordsArray.length; i++) {
+    if (newArray.indexOf(wordsArray[i]) === -1) {
+      newArray.push(wordsArray[i])
+    }
+}
+return newArray
+}
+
+uniquifyArray(duplicateWords)
+console.log( uniquifyArray(duplicateWords))
 
 
 // Bonus: Iteration 6 | Product of Adjacent Numbers
